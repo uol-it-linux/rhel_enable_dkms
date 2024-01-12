@@ -1,5 +1,10 @@
 ---
 
+- name: Ensure dkms package is installed
+  ansible.builtin.package:
+    name: dkms
+    state: present
+
 - name: Ensure DKMS service is enabled and started
   ansible.builtin.systemd:
     name: dkms
