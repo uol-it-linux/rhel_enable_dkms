@@ -1,0 +1,7 @@
+---
+
+- name: Ensure DKMS service is enabled and started
+  ansible.builtin.systemd:
+    name: dkms
+    enabled: yes
+    state: started
